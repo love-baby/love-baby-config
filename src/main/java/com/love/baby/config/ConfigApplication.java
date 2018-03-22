@@ -5,11 +5,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
-/**
- *
- * Created by liangbc on 2017/7/19.
- */
-
 @EnableAutoConfiguration
 @EnableDiscoveryClient
 @EnableConfigServer
