@@ -71,6 +71,7 @@
                 </configuration>
             </plugin>
 
+            <!--生成启动脚本插件-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
@@ -111,17 +112,18 @@
                     <logsDirectory>logs</logsDirectory>
                     <tempDirectory>tmp</tempDirectory>
                     <extraJvmArguments>-Xms128m</extraJvmArguments>
+                    <showConsoleWindow>false</showConsoleWindow>
+                    <useWildcardClassPath>true</useWildcardClassPath>
                     <programs>
                         <program>
                             <id>start</id>
+                            <name>ConfigApplication</name>
                             <!-- 启动类 -->
-                            <mainClass>com.love.baby.eureka.EurekaApplication</mainClass>
+                            <mainClass>com.love.baby.config.ConfigApplication</mainClass>
                             <jvmSettings>
-                                <extraArguments>
-                                    <extraArgument>-server</extraArgument>
-                                    <extraArgument>-Xmx1G</extraArgument>
-                                    <extraArgument>-Xms1G</extraArgument>
-                                </extraArguments>
+                                <initialMemorySize>32m</initialMemorySize>
+                                <maxMemorySize>64m</maxMemorySize>
+                                <maxStackSize>128m</maxStackSize>
                             </jvmSettings>
                         </program>
                     </programs>
