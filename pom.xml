@@ -116,8 +116,7 @@
                     <useWildcardClassPath>true</useWildcardClassPath>
                     <programs>
                         <program>
-                            <id>start</id>
-                            <name>ConfigApplication</name>
+                            <name>start</name>
                             <!-- 启动类 -->
                             <mainClass>com.love.baby.config.ConfigApplication</mainClass>
                             <jvmSettings>
